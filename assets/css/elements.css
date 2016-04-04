@@ -1,0 +1,136 @@
+@import 'normalize.css/normalize';
+@import 'owl.carousel';
+
+$yellow: #FBF200;
+
+@custom-media --tablet (width <= 740px);
+@custom-media --phone  (width <= 600px);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    &::selection {
+        background: $yellow;
+    }
+}
+
+.is-stop {
+    overflow-y: hidden;
+
+    .page-body {
+        pointer-events: none;
+
+        &.is-services {
+            pointer-events: unset;
+        }
+    }
+}
+
+.ic-call {
+    text-decoration: none;
+    position: fixed;
+    top: 35px;
+    right: 100px;
+    z-index: 10;
+    background: inline('../img/ic-contacts-yellow.png') 0 0 no-repeat;
+    background-size: contain;
+    size: size('../img/ic-contacts-yellow.png', 3);
+
+    .is-stop & {
+        z-index: -1;
+        visibility: hidden;
+    }
+}
+
+.ic-adbusters {
+    display: block;
+    background: url(../img/adbusters.png) 0 0 no-repeat;
+    background-size: contain;
+    size: 120px 36px;
+}
+
+.ic-close {
+    size: 35px;
+    background: inline('../img/ic-close.svg') 0 0 no-repeat;
+    background-size: cover;
+    display: block;
+
+    &.is-black {
+        background: inline('../img/ic-close-black.svg') 0 0 no-repeat;
+    }
+}
+
+.ic-menu {
+    display: block;
+    background: inline('../img/ic-navicon.svg') 0 0 no-repeat;
+    background-size: cover;
+    size: 35px;
+    cursor: pointer;
+}
+
+.ic-fb {
+    display: block;
+    background: inline('../img/ic-fb.svg') 0 0 no-repeat;
+    background-size: contain;
+    size: 45px;
+}
+.ic-vimeo {
+    display: block;
+    background: inline('../img/ic-vimeo.svg') 0 0 no-repeat;
+    background-size: contain;
+    size: 45px;
+}
+
+.main-menu_i {
+    min-width: 50px;
+    background-position: center center;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+
+    &.is-license {
+        background-image: inline('../img/ic-license.svg');
+        size: size('../img/ic-license.svg');
+    }
+    &.is-authors {
+        background-image: inline('../img/ic-authors.svg');
+        size: size('../img/ic-authors.svg');
+    }
+    &.is-create {
+        background-image: inline('../img/ic-create.svg');
+        size: size('../img/ic-create.svg');
+    }
+    &.is-audiobrand {
+        background-image: inline('../img/ic-audiobrand.svg');
+        size: size('../img/ic-audiobrand.svg');
+    }
+    &.is-sales {
+        background-image: inline('../img/ic-sales.svg');
+        size: size('../img/ic-sales.svg');
+    }
+    &.is-event {
+        background-image: inline('../img/ic-event.svg');
+        size: size('../img/ic-event.svg');
+    }
+    &.is-marketing {
+        background-image: inline('../img/ic-marketing.svg');
+        size: size('../img/ic-marketing.svg');
+    }
+    &.is-artists {
+        background-image: inline('../img/ic-artists.png');
+        size: size('../img/ic-artists.png', 5.5);
+    }
+    &.is-clients {
+        background-image: inline('../img/ic-client.svg');
+        size: size('../img/ic-client.svg');
+    }
+    &.is-info {
+        background-image: inline('../img/ic-info.svg');
+        size: size('../img/ic-info.svg');
+    }
+    &.is-contacts {
+        background-image: inline('../img/ic-contacts.png');
+        size: size('../img/ic-contacts.png', 2.4);
+    }
+}
